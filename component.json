@@ -1,0 +1,290 @@
+{
+    "title": "Seldon",
+    "description": "Seldon is an Open Predictive Platform that currently allows item recommendations and general predictive models to be deployed based on structured historical data.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/rummblelabs.com/1.0.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "http://recsvm.rummblelabs.com/",
+                    "https://recsvm.rummblelabs.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "postAction": {
+            "main": "./lib/actions/postAction.js",
+            "title": "post new action between a user and an item",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postAction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getItems": {
+            "main": "./lib/actions/getItems.js",
+            "title": "get items",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getItems.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postItem": {
+            "main": "./lib/actions/postItem.js",
+            "title": "post new item",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "putItem": {
+            "main": "./lib/actions/putItem.js",
+            "title": "update item",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/putItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getItemTypes": {
+            "main": "./lib/actions/getItemTypes.js",
+            "title": "get item type",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getItemTypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getItem": {
+            "main": "./lib/actions/getItem.js",
+            "title": "get item",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getItem.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "addAction": {
+            "main": "./lib/actions/addAction.js",
+            "title": "Add a user interaction",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/addAction.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRecommendation": {
+            "main": "./lib/actions/getRecommendation.js",
+            "title": "Get recommendations for a user",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRecommendation.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getToken": {
+            "main": "./lib/actions/getToken.js",
+            "title": "get token",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getToken.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getUsers": {
+            "main": "./lib/actions/getUsers.js",
+            "title": "get users",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUsers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "postUser": {
+            "main": "./lib/actions/postUser.js",
+            "title": "post new user",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/postUser.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "updateUser": {
+            "main": "./lib/actions/updateUser.js",
+            "title": "update user",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateUser.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getUser": {
+            "main": "./lib/actions/getUser.js",
+            "title": "get a user",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUser.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getUserActions": {
+            "main": "./lib/actions/getUserActions.js",
+            "title": "get a user's recent actions",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUserActions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getUserRecommendations": {
+            "main": "./lib/actions/getUserRecommendations.js",
+            "title": "get recommendations for a user",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUserRecommendations.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "oauth_token": {
+            "required": false,
+            "type": "string"
+        },
+        "full": {
+            "required": false,
+            "type": "boolean"
+        },
+        "name": {
+            "required": false,
+            "type": "string"
+        },
+        "dimension": {
+            "required": false,
+            "type": "integer"
+        },
+        "type": {
+            "required": false,
+            "type": "integer"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

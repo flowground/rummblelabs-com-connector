@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "oauth_token": {
+            "required": false,
+            "type": "string"
+        },
+        "itemId": {
+            "required": true,
+            "type": "string"
+        },
+        "full": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}

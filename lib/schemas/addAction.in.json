@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "consumer_key": {
+            "required": true,
+            "type": "string",
+            "default": "uggyecofcz"
+        },
+        "user": {
+            "required": true,
+            "type": "string"
+        },
+        "item": {
+            "required": true,
+            "type": "string"
+        },
+        "type": {
+            "required": true,
+            "type": "string"
+        },
+        "jsonpCallback": {
+            "required": true,
+            "type": "string"
+        },
+        "timestamp": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

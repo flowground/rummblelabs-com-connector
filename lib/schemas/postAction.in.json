@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "oauth_token": {
+            "required": false,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "item": {
+                    "example": "item1234",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "action type",
+                    "type": "integer"
+                },
+                "user": {
+                    "example": "user1234",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "action value (e.g. a rating)",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "user",
+                "item",
+                "type"
+            ],
+            "type": "object"
+        }
+    }
+}

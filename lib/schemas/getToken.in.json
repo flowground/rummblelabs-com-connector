@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "consumer_key": {
+            "required": true,
+            "type": "string"
+        },
+        "consumer_secret": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

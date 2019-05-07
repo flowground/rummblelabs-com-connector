@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "properties": {
+        "oauth_token": {
+            "required": false,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "active": {
+                    "description": "whether user is active",
+                    "type": "boolean"
+                },
+                "attributesName": {
+                    "properties": {
+                        "attrName1": {
+                            "example": "attrValue1",
+                            "type": "string"
+                        },
+                        "attrName2": {
+                            "example": "attrValue2",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "id": {
+                    "example": "myid1234",
+                    "type": "string"
+                },
+                "username": {
+                    "description": "name of user",
+                    "example": "Joe Bloggs",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        }
+    }
+}

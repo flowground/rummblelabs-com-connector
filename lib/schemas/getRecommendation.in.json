@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "properties": {
+        "consumer_key": {
+            "required": true,
+            "type": "string",
+            "default": "uggyecofcz"
+        },
+        "user": {
+            "required": true,
+            "type": "string"
+        },
+        "item": {
+            "required": false,
+            "type": "string"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer"
+        },
+        "dimension": {
+            "required": false,
+            "type": "integer"
+        },
+        "attributes": {
+            "required": false,
+            "type": "string",
+            "format": "command separated list"
+        },
+        "algorithms": {
+            "required": false,
+            "type": "string"
+        },
+        "jsonpCallback": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

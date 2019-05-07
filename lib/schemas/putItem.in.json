@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "properties": {
+        "oauth_token": {
+            "required": false,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "attributesName": {
+                    "properties": {
+                        "attrName1": {
+                            "example": "attrValue1",
+                            "type": "string"
+                        },
+                        "attrName2": {
+                            "example": "attrValue2",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "id": {
+                    "example": "myid1234",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "type of item",
+                    "example": 1,
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        }
+    }
+}
